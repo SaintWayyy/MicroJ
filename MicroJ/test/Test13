@@ -1,0 +1,40 @@
+interface Factory extends Window, Wheel, Name{
+    
+}
+
+interface Window{
+    void window();
+}
+
+interface Wheel{
+    void wheel();
+}
+
+interface Name{
+    void name();
+}
+
+
+
+class Car implements Factory{
+    constructor Car(){}
+
+    void name(Car self){
+        print("Saloon car");
+    }
+
+    void window(Car self){
+        print("window");
+    }
+
+    void wheel(Car self){
+        print("wheel");
+    }
+}
+
+int main(){
+    Car c : = new Car();
+    c.name();
+    c.window();
+    c.wheel();
+}

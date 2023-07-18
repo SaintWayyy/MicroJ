@@ -1,0 +1,10 @@
+/* define a class */
+class ClassName {
+constructor ClassName () {}
+}
+int main () {
+/* declare a class type variable */
+ClassName variableName ;
+/* define an object reference and initialize it with constructor */
+ClassName variableName : = new ClassName ();
+}

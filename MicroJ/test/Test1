@@ -1,0 +1,30 @@
+int a : = 20;
+
+int main(){
+    int a;
+    print(a);
+    a = 10;
+    print(a);
+    
+    double d;
+    print(d);
+    d = 2.1;
+    print(a);
+
+    string s : = "";
+    print(s);
+    s = "hello";
+    print(s);
+
+    bool b;
+    print(b);
+    b = true;
+    print(b);
+    
+    /*literal*/
+    print("hello");
+    print(3.5);
+    print(20);
+    print(false);
+}
+

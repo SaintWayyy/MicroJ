@@ -1,0 +1,64 @@
+/*Test class inheritance*/
+class Father {
+    public static int fPubStat;
+    private static int fPriStat;
+
+    public int fPub;
+    private int fPri;
+
+    constructor Father(int fPub, int fPri, int fPubStat, int fPriStat){
+
+    }
+
+    constructor Father(){
+
+    }
+
+    public static void fPublicStaticPrint(){
+        print("public static");
+    }
+
+    private static void fPrivatetStaticPrint(){
+        print("private static");
+    }
+
+    public void fPublicPrint(Father self){
+        print("public");
+    }
+
+    private void fPrivatePrint(Father self){
+        print("private");
+    }
+}
+
+class Son extends Father{
+    constructor Son(){
+
+    }
+
+    public void sTestPublic(Son self){
+        Father.fPublicStaticPrint();
+        self.fPublicPrint();
+        print(self.fPub);   
+
+        Father f : = new Father();
+        f.fPublicPrint();
+        print(f.fPub);
+    }
+
+    public void sTestPrivate(Son self){
+        Father.fPrivatetStaticPrint();
+        self.fPrivatePrint();
+        print(self.fPri);   
+        
+        Father f : = new Father();
+        f.fPrivatePrint();
+        print(f.fPri);
+    }
+}
+
+int main(){
+    Son s : = new Son();
+    s.sTestPublic();
+    s.sTestPrivate();
+}

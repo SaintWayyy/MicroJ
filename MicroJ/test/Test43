@@ -1,0 +1,13 @@
+class Student {
+    int[] scores;
+    constructor Student() {
+
+    }
+}
+
+int main() {
+    Student[] arr : = new Student[3];
+    arr[0] : = new Student();
+    arr[0].scores[0] = 29;
+    print(arr[0].scores[0]); 
+}

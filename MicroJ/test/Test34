@@ -1,0 +1,7 @@
+int mean ( int x , int y ) {
+    return ( x + y ) / 2;
+}
+int main () {
+    mean (3 , 3); /* This should return 3 */
+}
+

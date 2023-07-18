@@ -1,0 +1,28 @@
+int testReturn(){
+    return 3;
+    return 2;
+    return 1;
+}
+
+void testReturn2(){
+    return;
+}
+
+void testReturn3(){
+}
+
+bool testReturn4(){
+    return true;
+}
+
+string testReturn5(){
+    return "hello";
+}
+
+int main(){
+    print(testReturn());
+    testReturn2();
+    testReturn3();
+    print(testReturn4());
+    print(testReturn5());
+}

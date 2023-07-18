@@ -1,0 +1,20 @@
+class Classroom {
+    int[] ids;
+    int[] scores;
+    constructor Classroom(){}
+
+    void init(Classroom self){
+        self.ids = new int[5];
+        for (int i : = 0; i < 5; i = i + 1) {
+            self.ids[i] : = i;
+            print(self.ids[i]);
+        }
+    }
+}
+
+int main() {
+    Classroom a : = new Classroom();
+    a.init();
+    print(a.ids[4]);
+    a.ids = new int[5];
+}

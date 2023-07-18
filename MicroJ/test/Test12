@@ -1,0 +1,28 @@
+/*Test class implements interfaces*/
+class Chess implements Name, Move{
+    constructor Chess(){
+
+    }
+
+    void name(Chess self){
+        print("name");
+    }
+
+    void move(Chess self){
+        print("move");
+    }
+}
+
+int main(){
+    Chess c : = new Chess();
+    c.name();
+    c.move();
+}
+
+interface Name{
+    void name();
+}
+
+interface Move{
+    void move();
+}

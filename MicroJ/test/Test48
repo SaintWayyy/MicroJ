@@ -1,0 +1,64 @@
+/* <definition-assign-expression> ::= <regular-defasn> | <array-indexing-defasn> */
+/* <regular-defasn> ::= <variable-type> <identifier> := ... */
+/* <array-indexing-defasn> ::= <array-indexing-expression> := ... */
+
+class TestClass{
+    int temp;
+    constructor TestClass(int temp){}
+}
+
+int time2 (int a){
+    return a * 2;
+}
+
+int main(){
+    /* <variable-type> <identifier> : = <literal> */
+    int i := 3;
+    print(i);
+    /* <variable-type> <identifier> : = <identifier> */
+    int j := 5;
+    int m := j;
+    print(m);
+    /* <variable-type> <identifier> : = <binop-expression> */
+    int k := 2 + 3;
+    print(k);
+    /* <variable-type> <identifier> : = <unop-expression> */
+    int y := - 3;
+    print(y);
+    /* <variable-type> <identifier> : = <funcall-expression> */
+    int z := time2(2);
+    print(z);
+    /* <variable-type> <identifier> : = <new-funcall-expression> */
+    TestClass obj1 := new TestClass(5);
+    /* <variable-type> <identifier> : = <new-array-expression> */
+    int[] arr1 := new int[3];
+    /* <variable-type> <identifier> : = <access-expression> */
+    int acc1 := obj1.temp;
+    print(acc1);
+
+    /* <array-indexing-expression> : = <literal> */
+    arr1[0] := 3;
+    print(arr1[0]);
+    /* <array-indexing-expression> : = <identifier> */
+    arr1[0] := k;
+    print(arr1[0]);
+    /* <array-indexing-expression> : = <binop-expression> */
+    arr1[0] := 2 * 3;
+    print(arr1[0]);
+    /* <array-indexing-expression> : = <unop-expression> */
+    arr1[1] := -3;
+    print(arr1[1]);
+    /* <array-indexing-expression> : = <funcall-expression> */
+    arr1[1] := time2(3);
+    print(arr1[1]);
+    /* <array-indexing-expression> : = <new-funcall-expression> */
+    TestClass[] arr2 := new TestClass[3];
+    arr2[0] := new TestClass(7);
+    print(arr2[0].temp);
+    /* <array-indexing-expression> : = <array-indexing-expression> */
+    arr1[2] := arr1[1];
+    print(arr1[2]);
+    /* <array-indexing-expression> : = <access-expression> */
+    arr1[2] := obj1.temp;
+    print(arr1[2]);
+}

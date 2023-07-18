@@ -1,0 +1,28 @@
+
+/*test statement*/
+int main(){
+    /*while*/
+    int i;
+    while(i < 10){
+        print(i);
+        i = i + 2;
+    }
+
+    /*for*/
+    for(i = 5; i < 10; i = i+1){
+        print(i);
+    }
+
+    /*if*/
+    if(i == i){
+        print("is i");
+    }
+
+    /*if else*/
+    if(i != i){
+
+    }
+    else{
+        print("not i");
+    }
+}

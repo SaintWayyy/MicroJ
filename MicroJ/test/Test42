@@ -1,0 +1,52 @@
+/*Test polymorphism*/
+class Animal {
+    constructor Animal(){
+
+    }
+
+    void printName(Animal self){
+        print("Animal");
+    }
+}
+
+class Cat extends Animal{
+    constructor Cat(){
+
+    }
+
+    void printName(Cat self){
+        print("Cat");
+    }
+}
+
+class Bird extends Animal{
+    constructor Bird(){
+
+    }
+
+    void printName(Bird self){
+        print("Bird");
+    }
+}
+
+class Dog extends Animal{
+    constructor Dog(){
+
+    }
+
+    void printName(Dog self){
+        print("Dog");
+    }
+}
+
+int main() {
+    Animal c : = new Cat();
+
+
+    Animal[] array : = new Animal[3];
+    array[0] : = c;
+    array[0].printName();
+    for(int i : = 0; i < 3; i = i+1){
+        array[i].printName();
+    } 
+}

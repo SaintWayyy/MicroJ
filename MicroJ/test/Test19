@@ -1,0 +1,60 @@
+class Animal {
+    private static int offset;
+    int age;
+    double size;
+    int a;
+    static int f1;
+    static int f2;
+    constructor Animal() {}
+    constructor Animal(int age, int offset) {}
+
+    int sum(Animal self, int x) {
+        int a : = x + Animal.offset;
+        return a;
+    }
+    void bark(Animal self) {
+        print("Nonstatic Animal bark");
+    }
+    static void bark1() {
+        print("Static Animal bark");
+    }
+}
+
+class Cat extends Animal {
+    constructor Cat(){
+
+    }
+    void bark(Cat self) {
+        print("Cat miao");
+    }
+    void class_name(Cat self) {
+        print("My class is Cat");
+    }
+    void eat(Cat self) {
+        print("Cats eat fish");
+    }
+    int num(Cat self, int x) {
+        print(x);
+        return x + 2;
+    }
+}
+
+interface basic {
+    void class_name();
+    void eat();
+    int num(int x);
+}
+
+int main() {
+
+    Animal ob2 : = new Animal(87,100);
+    Animal ob3 : = new Animal();
+    Animal c : = new Cat();
+    c.bark();
+
+    print(ob2.size); 
+    print(ob2.a);
+    print(Animal.f1);
+    
+    print(ob2.sum(2));
+}

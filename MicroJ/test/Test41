@@ -1,0 +1,19 @@
+int i : = 10;
+int main(){
+    for(i = 0; i < 10; i = i + 1){
+        if(i == 4)
+            break;
+    }
+    /*i should be 4 right now*/
+    print("The answer of fib(5) is: ");
+    print(fib(i));
+}
+
+int fib(int i){
+    if(i == 1)
+        return 1;
+    if(i == 2)
+        return 2;
+    
+    return fib(i - 1) + fib(i - 2);
+}

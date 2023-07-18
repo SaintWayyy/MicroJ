@@ -1,0 +1,21 @@
+/* Test global variable */
+
+int counter : = 0;
+bool flag : = true;
+double data : = 3.14;
+
+int main(){
+    while ( counter < 5 && flag ){
+        counter = counter + 1;
+        data = data * 2.0;
+        if (data == 4.0 * 3.14) {
+            flag = false;
+        }
+    }
+    print(counter);
+    /* The result should be 2 */
+    print(flag);
+    /* The result should be 0 */
+    print(data);
+    /* The result should be 12.560000 */
+}

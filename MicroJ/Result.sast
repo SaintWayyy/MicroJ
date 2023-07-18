@@ -1,0 +1,24 @@
+int main() {
+    (void : print((int : (int : 2) + (int : 2))));
+    (void : print((int : (int : 2) - (int : 2))));
+    (void : print((int : (int : 2) * (int : 2))));
+    (void : print((int : (int : 2) / (int : 2))));
+    (void : print((bool : (int : 2) == (int : 2))));
+    (void : print((bool : (int : 2) != (int : 2))));
+    (void : print((bool : (int : 2) < (int : 2))));
+    (void : print((bool : (int : 2) <= (int : 2))));
+    (void : print((bool : (int : 2) > (int : 2))));
+    (void : print((bool : (int : 2) >= (int : 2))));
+    (void : print((double : (double : 2.1) + (double : 2.1))));
+    (void : print((double : (double : 2.1) - (double : 2.2))));
+    (void : print((double : (double : 2.1) * (double : 2.1))));
+    (void : print((double : (double : 2.1) / (double : 2.1))));
+    (void : print((bool : (double : 2.1) == (double : 2.1))));
+    (void : print((bool : (double : 2.1) != (double : 2.1))));
+    (void : print((bool : (double : 2.1) < (double : 2.1))));
+    (void : print((bool : (double : 2.1) <= (double : 2.1))));
+    (void : print((bool : (double : 2.1) > (double : 2.1))));
+    (void : print((bool : (double : 2.1) >= (double : 2.1))));
+    (void : print((double : -(double : 2.1))));
+    (void : print((int : -(int : 10))));
+}

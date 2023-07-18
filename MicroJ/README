@@ -1,0 +1,218 @@
+IMPORTANT: Please make sure dune is installed with opam.
+--------------------------------------------------------------------------------
+                            Command for compile
+--------------------------------------------------------------------------------
+To compile the compiler, follow the following steps:
+0. Make sure dune is installed, to do so:
+run "dune --version" in your terminal, ideally this should return 3.7.1
+1. run "dune clean" in your terminal
+2. run "dune build" in your terminal 
+--------------------------------------------------------------------------------
+                    Command for generating intermediary files
+--------------------------------------------------------------------------------
+To generate all intermediary files and run a specfic source file, use the command
+./LLoutPut.sh
+To use ./LLoutPut.sh:
+First, run "chmod +x ./LLoutPut.sh".
+Then, you need to run "./LLoutPut.sh" followed by a file name, eg:
+"./LLoutPut.sh Test1"; where "Test1" is a file in "./test"
+The generated AST would be named as "Result.ast"
+The generated SAST would be named as "Result.sast", it might be hidden from your
+VS code file catalg, but you could view this file from terminal and cat its 
+content
+The generated llvm IR would be names as "Result.ll"
+The generated executable would be names as "Result.exe"
+--------------------------------------------------------------------------------
+                            Testing Command
+--------------------------------------------------------------------------------
+To run the integration test, use "./testall.sh"
+First, run "chmod +x ./testall.sh".
+To run a single test, please supply the test file name, ie:
+"./testall.sh Test1"
+To run all, test, simply run "./testall.sh"
+--------------------------------------------------------------------------------
+                            Test Cases
+--------------------------------------------------------------------------------
+Note: The output of a test can be found in its corresponding .out file
+NEW FEATURES: Break; Continue; Array indexing; Define with intial value
+NEW Data Type: String, Array
+Positive test case 1: 
+This test checks all expressions in the langauge, namely: 
+- define and assign a variable
+- print a variable
+- all types of literals: string, double, integer, boolean
+- binary operation (plus, minus, multiply, divide) of: int, double, boolean
+
+Positive test case 2:
+This test checks all binop and unop on int and double, namely:
+- binop: + - * / == != <= >= >
+- unop: -
+
+Positive test case 3:
+This test checks while, for, if expressions
+
+Positive test case 4:
+This test checks functions call and return
+
+Positive test case 5: 
+This test checks binop and unop of bools, namely boolean operations:
+- binop: && ||
+- unop: !
+
+Positive test case 6:
+This test checks break, continue statements working as expected
+- break: branch to the block right after for or while
+- continue: branch to the predicate block
+
+Positive test case 7:
+This test checks recursion of function call
+
+Positive test case 8:
+This test checks define and initializing an in array, and indexing of int array
+
+Positive test case 9:
+This test checks array of all primitive types.
+
+Positive test case 10:
+This test checks cheak static and access control of class
+
+Positive test case 11:
+This test checks cheak class inheritance
+
+Positive test case 12:
+This test checks cheak class implements interfaces
+
+Positive test case 13:
+This test checks cheak interface extends multiple interfaces
+
+Positive test case 14:
+This test checks interface implementation and class extension
+
+Positive test case 15:
+This test checks polymorphism
+
+Positive test case 16:
+This test checks class array
+
+Positive test case 17 ~ 20:
+Mix up the features tested in Test10 to Test 16
+
+Positive test case 21:
+This test for object with initiallized string.
+
+Positive test case 22:
+This test test the polymorphism.
+
+Positive test case 23:
+This test for static function in class.
+
+Positive test case 24:
+This test is for the class field and methods.
+
+Positive test case 25:
+This test tests the self parameter.
+
+Positive test case 26:
+This test tests the initiallization in class constructor.
+
+Positive test case 27:
+This test tests the definition of class.
+
+Positive test case 28:
+This test tests how to use array.
+
+Positive test case 29:
+This test tests the if statement.
+
+Positive test case 30:
+This test tests the for statement.
+
+Positive test case 31:
+This test checks a while loop.
+
+Positive test case 32:
+This test checks break and continue statement in for loop
+
+Positive test case 33:
+This test checks function definition.
+
+Positive test case 34:
+This test checks function call and integer division.
+
+Positive test case 35:
+This test checks class definition, creating an instance, and method access.
+
+Positive test case 36:
+This test checks class definition where one class definition contains an object
+field.
+
+Positive test case 37:
+This test checks arithmetic operations of integers and doubles.
+
+Positive test case 38:
+This test checks relational operations of integers and doubles.
+
+Positive test case 39:
+This test checks class definition where one class definition contains an object
+array field.
+
+Positive test case 40:
+This test checks unop.
+
+Positive test case 40: 
+Test Unary Operation
+
+Positive test case 41: 
+Test for loop with break statement. Also test recusion with fib() function
+
+Positive test case 42: 
+Test polymorphism in array. This test tell us that polymorphism doesn't work
+for object array.
+
+Positive test case 43:
+Test object array, and each element in this array is a class with an array as one 
+of its field.
+
+Positive test case 44:
+Test global variable definitions, and use those global variables in a while loop.
+
+Positive test case 45:
+Test all kinds of access expression.
+
+Positive test case 46:
+Test declaring a array without initial value, and initialize it later. Also test 
+boolean operation.
+
+Positive test case 47:
+Test basic functionalities of our langauge. such as variable definitions, binary operation
+class definition, etc.
+
+Positive test case 48:
+Test all expressions supported by our language
+
+Positive test case 49:
+Test all kinds of expressions that update a class's field.
+
+Negative Test 1:
+This test checks binop of different types will throw an error, specifically, the
+error message should be
+- Fatal error: exception Failure("illegal binary operator int * double in a * b")
+
+Negative Test 2:
+This test checks class without constructor will throw an error, specifically, 
+the error message should be
+- Fatal error: exception Dune__exe__Semant.Exception("No constructor has been defined for butterfly")
+
+Negative Test 3:
+This test checks class implementing interface without constructor will throw an 
+error, specifically, the error message should be
+- Fatal error: exception Dune__exe__Semant.Exception("sum of interface myInterface is not defined in class myClass")
+
+Negative Test 4:
+This test checks instance of a class calling undefined method of the class will 
+throw and error, specifically, the error message should be
+- Fatal error: exception Failure("Function getName is undefined")
+
+
+
+

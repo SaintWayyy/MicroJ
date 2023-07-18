@@ -1,0 +1,24 @@
+/* This test for static function in class. */
+class Animal {
+    private static string species;
+    public int age;
+    double size;
+    static string name;
+    constructor Animal() {}
+    constructor Animal(int age) {} /* the parameter has the same name as its field 'age */
+
+    void eat(Animal self) {
+        print("I eat meat");
+    }
+    static void sleep() {
+        print("I'm sleeping");
+    }
+}
+
+int main() {
+    Animal lion : = new Animal(3);
+    lion.eat();
+    Animal.sleep();
+    Animal.name = "King";
+    print(Animal.name);
+}

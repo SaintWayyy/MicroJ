@@ -1,0 +1,33 @@
+int main () {
+    /* int array */
+    int[] arrI : = new int[3];
+    arrI[0] : = 1;
+    arrI[1] : = 2;
+    arrI[2] : = 3;
+    print(arrI[0]);
+    print(arrI[1]);
+    print(arrI[2]);
+
+    /* bool array */
+    bool[] arrB : = new bool[2];
+    arrB[0] : = true;
+    arrB[1] : = false;
+    print(arrB[0]);
+    print(arrB[1]); 
+
+    /* string array */
+    string[] arrS : = new string[2];
+    arrS[0] : = "hello";
+    arrS[1] : = "world";
+    print(arrS[0]);
+    print(arrS[1]);
+
+    /* double array */
+    double[] arrD : = new double[3];
+    arrD[0] : = 1.1;
+    arrD[1] : = 2.2;
+    arrD[2] : = 3.3;
+    print(arrD[0]);
+    print(arrD[1]);
+    print(arrD[2]);
+}

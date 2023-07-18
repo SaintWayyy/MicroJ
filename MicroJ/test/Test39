@@ -1,0 +1,24 @@
+class Student {
+    int age;
+    string name;
+    constructor Student(int age, string name){}
+}
+class Classroom {
+    int[] ids;
+    Student[] students;
+    constructor Classroom(){}
+}
+
+
+
+int main() {
+    Classroom a : = new Classroom();
+    a.students = new Student[3];
+    a.students[0]: = new Student(20, "James");
+
+    Student temp : = a.students[0];
+    print(temp.name);
+    /*Student[] arr : = new Student[3];
+    arr[0] : = new Student(20, "James");
+    print(arr[0].age);*/
+}

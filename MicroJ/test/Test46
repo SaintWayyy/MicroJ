@@ -1,0 +1,10 @@
+/* Test for define array first and asn it later with = instead of : = */
+
+int main(){
+    int[] a;
+    a = new int[3];
+
+    bool a;
+    a = true && !true;
+    print(a);
+}

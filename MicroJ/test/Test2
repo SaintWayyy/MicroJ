@@ -1,0 +1,31 @@
+
+/*test expression*/
+int main(){    
+    /*bin op of int*/
+    print(2 + 2);
+    print(2 - 2);
+    print(2 * 2);
+    print(2 / 2);
+    print(2 == 2);
+    print(2 != 2);
+    print(2 < 2);
+    print(2 <= 2);
+    print(2 > 2);
+    print(2 >= 2);
+
+    /*bin op of float*/
+    print(2.1 + 2.1);
+    print(2.1 - 2.2);
+    print(2.1 * 2.1);
+    print(2.1 / 2.1);
+    print(2.1 == 2.1);
+    print(2.1 != 2.1);
+    print(2.1 < 2.1);
+    print(2.1 <= 2.1);
+    print(2.1 > 2.1);
+    print(2.1 >= 2.1);
+
+    /*unop*/
+    print(-2.1);
+    print(-10);
+}

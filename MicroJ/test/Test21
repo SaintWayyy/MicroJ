@@ -1,0 +1,14 @@
+/* This test for object with initiallized string.*/
+class Cat {
+    string name;
+    constructor Cat(string name) {}
+
+    
+}
+string g;
+int main(){
+    Cat a : = new Cat("hi");
+    print(a.name);
+    g = "hl";
+    print(g);
+}

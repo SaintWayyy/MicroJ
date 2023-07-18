@@ -1,0 +1,12 @@
+class Animal {
+    constructor Animal(){
+
+    }
+}
+
+
+int main(){
+    Animal cat = new Animal();
+
+    cat.getName();
+}

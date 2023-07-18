@@ -1,0 +1,20 @@
+/* This test is for the class field and methods. */
+class Point {
+    int x;
+    int y;
+    constructor Point ( int x , int y ){}
+        void moveX ( Point self , int distance ){
+        self . x = self . x + distance ;
+    }
+    void moveY ( Point self , int distance ){
+        self . y = self . y + distance ;
+    }
+    void pirntPoint(Point self){
+        print(self.x);
+        print(self.y);
+    }
+}
+int main () {
+    Point p : = new Point (0 , 0);
+    p.pirntPoint();
+}

@@ -1,0 +1,28 @@
+/* Test for access */
+class MyClass {
+    bool[] bArray;
+    double d;
+
+    constructor MyClass(){
+
+    }
+
+    void method(MyClass self){
+
+    }
+}
+
+void main(){
+    MyClass[] cArray : = new MyClass[3];
+    cArray[0] : = new MyClass();
+    MyClass c : = new MyClass();
+
+    c.d;
+    cArray[0].d;
+
+    c.bArray[0];
+    cArray[0].bArray[0];
+
+    c.method();
+    cArray[0].method();
+}

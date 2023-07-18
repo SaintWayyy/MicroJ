@@ -1,0 +1,30 @@
+/*Test class array*/
+class Integer{
+    int i;
+    constructor Integer(int i){
+
+    }
+
+    constructor Integer(){
+
+    }
+}
+
+Integer[] initArray(){
+    Integer[] array : = new Integer[10];
+    int i;
+    for(i = 0; i < 10; i = i+1){
+        array[i] : = new Integer(i);
+    } 
+
+    return array;
+}
+
+int main() {
+    Integer[] array : = initArray();
+
+    int i;
+    for(i = 0; i < 10; i = i+1){
+        print(array[i].i);
+    } 
+}

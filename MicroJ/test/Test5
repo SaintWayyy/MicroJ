@@ -1,0 +1,13 @@
+int main(){
+    /*test binop of bool*/
+    print(true && true);
+    print(false && false);
+    print(true && false);
+
+    print(true || true);
+    print(false || false);
+    print(true || false);
+
+    print(!false);
+    print(!true);
+}

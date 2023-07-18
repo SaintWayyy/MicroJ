@@ -1,0 +1,46 @@
+/*cheak static and access control*/
+
+class Father {
+    public static int pubStat;
+    private static int priStat;
+
+    public int pub;
+    private int pri;
+
+    constructor Father(int pub, int pri, int pubStat, int priStat){
+
+    }
+
+    public static void publicStaticPrint(){
+        print("public static");
+    }
+
+    private static void privatetStaticPrint(){
+        print("private static");
+    }
+
+    public void publicPrint(Father self){
+        print("public");
+    }
+
+    private void privatePrint(Father self){
+        print("private");
+    }
+}
+
+
+int main() {
+    Father f : = new Father(1,2,3,4);
+    print(Father.pubStat);
+    print(f.pub);
+
+    Father.pubStat = 10;
+    f.pub = 20;
+    print(Father.pubStat);
+    print(f.pub);
+
+
+    Father.publicStaticPrint();
+    f.publicPrint();
+}
+

@@ -1,0 +1,13 @@
+/* Test relational operator */
+
+int main(){
+    print(3 != 5); /* should return 1*/
+
+    print(3 != 3); /* should return 0 */
+
+    print(4.12 == 4.12); /* should return 1 */
+
+    print(3 >= 5); /* should return 0 */
+
+    print(3.14159 > 2.0) ; /* should return 1 */
+}

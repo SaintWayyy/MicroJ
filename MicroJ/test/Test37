@@ -1,0 +1,20 @@
+/* Test airthmetic operator */
+int main(){
+    /* Addition */
+    print(4 + 3);   /* The result should be 7. */
+    print(12.6 + 9.84); /* The result should be 22.440000. */
+
+    /* Subtraction*/
+    print(4 - 3);   /* The result should be 1. */
+    print(12.6 - 9.84);    /* The result should be 2.760000. */
+
+    /* Multiplication*/
+    print(4 * 3);  /* The result should be 12. */
+    print(12.6 * 9.84);    /* The result should be 123.984000 */
+
+    /*Division*/
+    /* Integer division will remove the trailing numerals to 0, 
+    for example 4 / 3 is 1. */
+    print(4 / 3);   /* The result should be 1 */
+    print(12.6 / 9.84);   /* The result should be 1.2804878049 */
+}

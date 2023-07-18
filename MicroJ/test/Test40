@@ -1,0 +1,10 @@
+/* Test Unary Operator */
+int main(){
+    int a : = 2;
+    print(-a); /* THe result should be -2. */
+    int b : = 0;
+    print(-b); /* The result should be 0. */
+
+    bool c : = true;
+    print(!c); /* The result should be 0 */
+}

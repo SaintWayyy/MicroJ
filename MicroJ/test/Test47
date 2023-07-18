@@ -1,0 +1,54 @@
+/* Test for identifier assign */
+class TestClass{
+    int temp;
+    constructor TestClass(int temp){}
+}
+
+int time2 (int a){
+    return a * 2;
+}
+
+int main(){
+    /* ⟨identifier ⟩ = ⟨literal ⟩ */
+    int a;
+    a = 3;
+    print(a);
+    /* The output should be 3. */
+    /* ⟨identifier ⟩ = ⟨identifier ⟩ */
+    int b;
+    b = a;
+    print(b);
+    /* The output should be 3. */
+    /* ⟨identifier ⟩ = ⟨binop-expression⟩ */
+    bool c;
+    c = true && false;
+    print(c);
+    /* The output should be 0. */
+    /* ⟨identifier ⟩ = ⟨unop-expression⟩ */
+    c = !c;
+    print(c);
+    /* The output should be 1. */
+    /* ⟨identifier ⟩ = ⟨funcall-expression⟩ */
+    a = time2(a);
+    print(a);
+    /* The output should be 6. */
+    /* ⟨identifier ⟩ = ⟨new-funcall-expression⟩ */
+    TestClass d;
+    d = new TestClass(1);
+    /* ⟨identifier ⟩ = ⟨new-array-expression⟩ */
+    int[] arr;
+    arr = new int[10];
+    arr[3] : = 2;
+    print(arr[3]);
+    /* The output should be 2. */
+    /* ⟨identifier ⟩ = ⟨array-indexing-expression⟩ */
+    a = arr[3];
+    print(a);
+    /* The output should be 2. */
+    /* ⟨identifier ⟩ = ⟨access-expression⟩ */
+    int temp;
+    temp = d.temp;
+    print(temp); 
+    /* The output should be 1. */
+    
+}

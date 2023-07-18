@@ -1,0 +1,27 @@
+class Student implements collegeStudent {
+    string name;
+    int score;
+    constructor Student(int score){}
+
+    void setName(Student self, string name) {
+        self.name = name;
+    }
+
+    int score(Student self) {
+        return self.score;
+    }
+}
+
+interface collegeStudent {
+    /*Abstract Methods*/
+    void setName(string name);
+   
+    int score();
+}
+
+int main() {
+    Student James : = new Student(100);
+    print(James.score);
+    James.setName("James");
+    print(James.name);
+}

@@ -1,0 +1,17 @@
+class Student {
+    constructor Student (){}
+}
+int main (){
+    /* declaration and initialization of primitive array */
+    int [] intArray ;
+    /* initialization array with speific dimension */
+    int [] intArray2 : = new int [10];
+    /* declaration and initialization of reference array */
+    Student [] studentArray : = new Student [10];
+    /* declare variable James */
+    Student James : = new Student ();
+    /* access and modify the value at a specific index of an array */
+    studentArray [2] : = James ;
+    /* access and get value at specific index of an array */
+    Student Amy : = studentArray [2];
+}

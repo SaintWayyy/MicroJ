@@ -1,0 +1,87 @@
+
+class Animal {
+    public static void bark1() {
+        print("Static Animal bark");
+    }
+    private int offset;
+    int age;
+    double size;
+    int a;
+    private static int f1;
+    static int f2;
+    constructor Animal() {}
+    constructor Animal(int age, int offset, int f1, int a, int f2) {}
+
+    int sum(Animal self, int x) {
+        int a : = x + self.offset;
+        return a;
+    }
+    int update_offset(Animal self) {
+        self.offset = self.offset + 1;
+        return self.offset;
+    }
+    int get_offset(Animal self) {
+        return self.offset;
+    }
+
+    int get_f1(Animal self) {
+        Animal.f1 = Animal.f1 + 1;
+        return Animal.f1;
+    }
+    int get_f2(Animal self) {
+        Animal.f2 = Animal.f2 + 6;
+        return Animal.f2;
+    }
+    void bark(Animal self) {
+        print("Nonstatic Animal bark");
+    }
+    
+}
+
+class Cat extends Animal implements basic {
+    constructor Cat(){
+
+    }
+    void bark(Cat self) {
+        print("Cat miao");
+    }
+    void class_name(Cat self) {
+        print("My class is Cat");
+    }
+    void eat(Cat self) {
+        print("Cats eat fish");
+    }
+    int num(Cat self, int x) {
+        print(x);
+        return x + 2;
+    }
+    void printme(Animal self) {
+        
+    }
+}
+
+interface basic extends Print{
+    void class_name();
+    void eat();
+    int num(int x);
+}
+
+interface Print {
+    void printme();
+}
+
+int main() {
+    Animal ob2 : = new Animal(87,100, 6, 7, 8);
+    Animal ob3 : = new Animal();
+    int[] arr1 : = new int[5];
+    Animal[] arr : = new Animal[3];
+    arr[2] : = ob2;
+    Animal a : = arr[2];
+    a.bark();
+    Animal.bark1();
+    print(ob2 == ob3);
+    print(ob2.get_offset());
+    print(ob2.update_offset());
+    print(ob2.get_f1());
+    print(ob2.get_f2());
+}

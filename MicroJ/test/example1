@@ -1,0 +1,75 @@
+class Stack {
+    private int[] data;
+    private int size;
+     int top;
+
+    constructor Stack() {
+    }
+
+    constructor Stack(int size) {
+    }
+
+    void init(Stack self) {
+        self.data = new int[self.size];
+    }
+
+    bool push(Stack self, int val) {
+        if(self.isFull()){
+            return false;
+        }
+
+        int[] dataTemp : = self.data;
+        
+        dataTemp[self.top] : = val;
+       
+        self.top = self.top + 1;
+
+        return true;
+    }
+
+    int pop(Stack self) {
+        if(self.isEmpty()){
+            return -1;
+        }
+        int[] dataTemp : = self.data;
+        int result : = dataTemp[self.top - 1];
+        self.top = self.top - 1;
+        
+        return result;
+    }
+
+    int peak(Stack self) {
+        int[] dataTemp : = self.data;
+        return dataTemp[self.top - 1];
+    }
+
+    bool isEmpty(Stack self) {
+        return self.top == 0;
+    }
+    
+    bool isFull(Stack self) {
+        return self.top == self.size;
+    }
+
+}
+
+int main() {
+    Stack s : = new Stack(10);
+    s.init();
+
+    int i;
+    for(i = 0; i < 10; i = i + 1){
+        s.push(i);
+    }
+    if(s.isFull()){
+        print("Full");
+    }
+    
+
+    for(i = 0; i < 10; i = i + 1){
+        print(s.pop());
+    }
+    if(s.isEmpty()){
+        print("Empty");
+    }
+}

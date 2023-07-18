@@ -1,0 +1,49 @@
+/* This test test the polymorphism  */
+class Coordinate{
+    int x;
+    int y;
+    constructor Coordinate(int x, int y){}
+    void printLocation(Coordinate self){
+        print("X-cordinate:");
+        print(self.x);
+        print("Y-cordinate:");
+        print(self.y);
+    }
+}
+
+interface operation{
+    void moveX(int distance);
+    void moveY(int distance);
+}
+
+class Point extends Coordinate implements operation{
+    constructor Point(int x, int y) {}
+
+    public void moveX(Point self, int distance) {
+        self.x = self.x + distance;
+    }
+
+    public void moveY(Point self, int distance) {
+        self.y = self.y + distance;
+    }
+
+    public void printLocation(Point self){
+        print("Point Location:");
+    }
+}
+
+int main(){
+    Coordinate zero : = new Point(0, 0);
+    Coordinate orign : = new Coordinate(0,0);
+    zero.moveX(3);
+    
+    zero.printLocation();
+    /* The out put shoud be "Point Location:" */
+    orign.printLocation();
+    /* The out put should be:
+    "X-cordinate:"
+    0
+    "Y-cordinate:"
+    0
+    */
+}

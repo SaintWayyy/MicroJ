@@ -1,0 +1,34 @@
+/*Test interface implementation and class extension*/
+
+interface Behaviour extends bark{
+}
+
+interface bark{
+    void bark();
+}
+
+class Animal {
+    int leg;
+
+    constructor Animal(){
+
+    }
+}
+
+class Dog extends Animal implements Behaviour{
+    constructor Dog(int leg){
+
+    }
+
+    void bark(Dog self){
+        print("wang wang");
+    }
+
+}
+
+int main(){
+    Dog d : = new Dog(4);
+
+    print(d.leg);
+    d.bark();
+}

@@ -1,0 +1,13 @@
+class Student   {
+      int [] scores = (void : int [] scores(int [] : null));
+    constructor Student() {
+    ;
+}
+}
+
+int main() {
+    (void : Student [] arr(Student [] : new Student [(int : 3)]));
+    (void : arr(int : 0) = (Student : new (Student : Student())));
+    (void : (int : (Student : arr(int : 0)).(int : scores(int : 0))) = (int : 29));
+    (void : print((int : (Student : arr(int : 0)).(int : scores(int : 0)))));
+}

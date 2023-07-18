@@ -1,0 +1,9 @@
+class butterfly {
+    string species;
+    string color;
+    int wingSpan;
+}
+
+int main () {
+    /*Semanti error: class must have a constructor*/
+}

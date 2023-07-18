@@ -1,0 +1,18 @@
+interface myInterface {
+    int sum (int a, int b);
+}
+
+/*class must implement methods in interface*/
+class myClass implements myInterface {
+    int multiply(int a, int b) {
+        return a * b;
+    }
+    
+    constructor myClass() {
+        
+    }
+}
+
+int main () {
+    
+}

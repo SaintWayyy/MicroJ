@@ -1,0 +1,16 @@
+int main(){
+    int[] intArray : = new int[10];
+    int i;
+
+    for(i = 0; i < 10; i = i+1){
+        intArray[i] : = i;
+    }
+
+    for(i = 0; i < 10; i = i+1){
+        if(i == 5){
+            break;
+        }
+    }
+
+    print(intArray[i]);
+}

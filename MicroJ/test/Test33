@@ -1,0 +1,6 @@
+int square ( int x ) {
+    return x * x ;
+}
+int main () {
+    square (3); /* This should return 9 */
+}

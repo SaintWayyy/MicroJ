@@ -1,0 +1,63 @@
+/* 
+field-assign-expression⟩ ::= field-access = literal 
+| field-access = identifier 
+| field-access = binop-expression
+| field-access = unop-expression
+| field-access = funcall-expression
+| field-access = new-funcall-expression
+| field-access = array-indexing-expression
+| field-access = new-array-expression
+| field-access = access-expression
+ */
+
+class myClass{
+    int a;
+    int b;
+    bool c;
+    bool d;
+    myClass2 my2;
+    constructor myClass(int a, int b, bool c, bool d){}
+}
+
+class myClass2{
+    int a2;
+    int b2;
+    int[] arr2;
+    constructor myClass2(int a2, int b2){}
+}
+
+int time2 (int a){
+    return a * 2;
+}
+
+int main(){
+    myClass temp1 : = new myClass(1, 2, true, false);
+    /* field-access = literal */
+    temp1.a = 10;
+    print(temp1.a);
+    /* The oupt put should be 10. */
+    /* field-access = identifier */
+    int e : = 2;
+    temp1.a = e;
+    print(temp1.a);
+    /* The output should be 2. */
+    /* field-access = binop-expression */
+    temp1.b = 4 + 7;
+    print(temp1.b);
+    /* The output should be 11 */
+    /* field-access = unop-expression */
+    temp1.c = !temp1.c;
+    print(temp1.c);
+    /* The output should be 0 */
+    /* field-access = funcall-expression */
+    temp1.a = time2(temp1.a);
+    print(temp1.a);
+    /* The output should be 4. */
+    /* field-access = new-funcall-expression */
+    temp1.my2 = new myClass2(3,4);
+    /* field-access = new-array-expression */
+    myClass2 temp2 : = new myClass2(5, 6);
+    /* field-access = access-expression */
+    temp2.a2 = temp1.a;
+    print(temp2.a2);
+}
